@@ -5,8 +5,9 @@ import {
   Switch,
   Route,
   Link
-} from "react-router-dom";
+} from 'react-router-dom';
 
+import HomePage from './pages/home-page';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
       <div className="App">
         <Switch>
           <Route path="/">
-            <Home />
+            <HomePage/>
           </Route>
         </Switch>
       </div>
