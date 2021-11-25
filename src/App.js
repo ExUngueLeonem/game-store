@@ -1,5 +1,5 @@
 import './App.css';
-
+import React from 'react';
 import {
   BrowserRouter as Router,
   Route,
@@ -13,7 +13,7 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          <Route exact path="/" element={HomePage}/>
+          <Route path="/home" element={<HomePage/>}/>
         </Routes>
       </div>
     </Router>
