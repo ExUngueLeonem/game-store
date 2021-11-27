@@ -4,11 +4,7 @@ import './home-page.css';
 const HomePage = () => {
     return (
         <div className='home-page'>
-            home page
-            home page
-            home page
-            home page
-            home page
+            HomePage
         </div>
     )
 }

@@ -1,0 +1,37 @@
+.header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    border: 1px solid red;
+}
+
+.wrapper {
+    display: flex;
+    flex-grow: 1;
+
+    border: 1px solid blue;
+
+}
+
+.header__store-title {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+
+    border: 1px solid red;
+
+}
+
+.header__cart-btn-wrapper {
+    justify-content: flex-end;
+
+    border: 1px solid red;
+
+}
+/*
+     border: 1px solid red;
+ */
