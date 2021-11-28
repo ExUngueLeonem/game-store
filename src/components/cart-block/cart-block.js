@@ -6,7 +6,7 @@ const CartBlock = () => {
     return (
         <div className="cart-block">
             <BiCartAlt size={30} className="cart-block__icon"/>
-            <span className="cart-block_total-price">300 bucks</span>
+            <span className="cart-block__total-price">300 bucks</span>
         </div>
     )
 };
