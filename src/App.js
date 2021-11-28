@@ -23,7 +23,9 @@ function App() {
     </Router>
   );
 }
+
                                     /*  здесь находится ключ, его нужно засекретить*/     /* сюда можно вписать дату */
+/* 
 fetch("https://api.rawg.io/api/games?key=API_KEY=2019-09-01,2019-09-30&platforms=18,1,7 ")
 .then(res => res.json())
 .then(response => {
@@ -32,7 +34,7 @@ fetch("https://api.rawg.io/api/games?key=API_KEY=2019-09-01,2019-09-30&platforms
 .catch(err => {
 	console.error(err);
 });
-
+ */
 
 export default App;
 
