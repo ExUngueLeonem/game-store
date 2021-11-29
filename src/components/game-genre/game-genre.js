@@ -1,13 +1,13 @@
 import React from 'react';
 import './game-genre.css';
 
-const GameGenre = ({genre, key}) => {
+//это один genre
+const GameGenre = ({genre}) => {
     console.log(genre)
     return (
-        <span className="game-genre" key={genre}>
+        <span className="game-genre">
             { genre }
         </span>
-        
     )
 }
 
