@@ -5,12 +5,15 @@ const cartSlice = createSlice({
     initialState: {
         itemsInCart:[]
     },
-    reducers: {
+    reducers: { //здесь нужно напрямую менять стейт. возвращать копию не получится
         setItemInCart: (state, action) => {
             state.itemsInCart.push(action.payload)
         },
         deleteItemFromCart: (state, action) => {
-            state.itemsInCart.filter(game => game.id !== action.payload)
+            state.itemsInCart = state.itemsInCart.filter(game => { 
+                //console.log (action.payload) 
+                return game.id !== action.payload 
+            })
         },
     }
 });

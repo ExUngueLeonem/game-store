@@ -8,7 +8,9 @@ const CartMenu = ({ items, onClick }) => {
         <div className="cart-menu">
             <div className="cart-menu__games-list">
                 {
-                    items.length > 0 ? items.map((game, i) => {return <div key={i}>{game.title}</div> }): 'Корзина пуста'
+                   /*  items.length > 0 ? items.map(game => game.title): 'Корзина пуста' */
+                     items.length > 0 ? items.map((game, i) => {return <div key={i}>{game.title}</div> }): 'Корзина пуста'
+ 
                 }   
             </div>
             {

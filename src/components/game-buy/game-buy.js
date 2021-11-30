@@ -7,14 +7,15 @@ import './game-buy.css';
 const GameBuy = ({ game }) => {
     const dispatch = useDispatch();
     const items = useSelector(state => state.cart.itemsInCart);
-    const isItemsInCart = items.some(item => item.id === game.id);
+    const isItemInCart = items.some(item => item.id === game.id);
 
     const handleClick = (e) => {
         e.stopPropagation();//выяснить, нужен ли он вообще
-        if ( isItemsInCart) {
-            dispatch(deleteItemFromCart(game))
+
+        if (isItemInCart) {
+            dispatch(deleteItemFromCart(game.id));
         } else {
-            dispatch(setItemInCart(game))
+            dispatch(setItemInCart(game));
         }
     }
 
@@ -22,9 +23,9 @@ const GameBuy = ({ game }) => {
         <div className="game-buy">
             <span className="game-buy__price">{game.price} руб.</span>
             <Button
-                type= {isItemsInCart ? 'secondary' : 'primary'}
-                onClick={handleClick}>
-                    {isItemsInCart ? 'Убрать из корзины' : 'В корзину'}
+                type= {isItemInCart ? 'secondary' : 'primary'}
+                onClick={ handleClick }>
+                    {isItemInCart ? 'Убрать из корзины' : 'В корзину'}
             </Button>
         </div>
     )
