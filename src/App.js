@@ -9,6 +9,7 @@ import { store } from './redux'
 
 import Header from './components/header'
 import HomePage from './pages/home-page';
+import GamePage from './pages/game-page';
 
 import './App.css';
 
@@ -20,6 +21,8 @@ function App() {
           <Header/>
           <Routes>
             <Route path="/" element={<HomePage/>}/>
+            <Route path="/app/:title" element={<GamePage/>}/>
+
           </Routes>
         </div>
       </Router>
