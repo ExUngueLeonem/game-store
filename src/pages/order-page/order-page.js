@@ -6,19 +6,19 @@ import './order-page.css';
 
 const OrderPage = () => {
     const items = useSelector(state => state.cart.itemsInCart);
-    const game = items.game;
+    
     if(items.length < 1) {
-        return <h1>Ваша корзина пуста</h1>
+        return (<h1>Ваша корзина пуста</h1>)
     }
     return (
         <div className="order-page">
             <div className="order-page__left">
-                {items.map(item =>(<OrderItem game={game}/>) )}
+                {items.map(game =>(<OrderItem game={game} key={game.title}/>) )}
             </div>
             <div className="order-page__right">
                 <div className="order-page__total-price">
                     <span>
-                        {calcTotalPrice()}
+                        {items.length} на сумму {calcTotalPrice(items)} руб.
                     </span>
                 </div>
             </div>
